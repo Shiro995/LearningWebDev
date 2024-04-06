@@ -1,24 +1,28 @@
-.how.text{
+#how{
     text-align: center;
     font-size: 35px;
     color: rgb(219, 208, 108);
+    margin: auto;
+    padding: 10px;
 }
 
 .typ.text {
 background-color: rgb(158, 230, 230);
 color:gray;
 font-size: 30px;
-text-align: left;
+text-align: center;
 margin: left;
 width:175px;
 height: auto;
 border: 2px solid #d2adff;
+padding: 5px;
 }
 
 .text {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 20px;
+    margin-left: 200px;
 }
 ul .text {
     font-weight:100;
@@ -26,7 +30,13 @@ ul .text {
 }
 .center {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
+    margin: auto;
+    padding: 10px;
+    width: auto;
+    max-width: 40%;
+    height: auto;
+}
+
+.highlight {
+    background-color: rgb(255, 255, 159);
 }

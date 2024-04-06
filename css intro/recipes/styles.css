@@ -11,8 +11,10 @@
 }
 
 .point {
+    margin: 50px;
     font-size: 25px;
     color:darkgoldenrod;
+    margin-left: 400px;
 }
 
 .point, 
