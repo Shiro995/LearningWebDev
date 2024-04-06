@@ -2,6 +2,12 @@
     font-size: 35px;
     background-color: aquamarine;
     text-align: center;
+    padding: 20px;
+    margin: auto;
+    border: 5px solid #d2a2ff; 
+    height: auto;
+    width: 200px;
+    
 }
 
 .point {

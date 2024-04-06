@@ -8,6 +8,11 @@
 background-color: rgb(158, 230, 230);
 color:gray;
 font-size: 30px;
+text-align: left;
+margin: left;
+width:175px;
+height: auto;
+border: 2px solid #d2adff;
 }
 
 .text {
