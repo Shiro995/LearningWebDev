@@ -1,0 +1,27 @@
+.how.text{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(219, 208, 108);
+}
+
+.typ.text {
+background-color: rgb(158, 230, 230);
+color:gray;
+font-size: 30px;
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+ul .text {
+    font-weight:100;
+    color: rgb(219, 208, 108);
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}

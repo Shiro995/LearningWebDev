@@ -1,0 +1,20 @@
+.h1 {
+    font-size: 35px;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.point {
+    font-size: 25px;
+    color:darkgoldenrod;
+}
+
+.point, 
+.h1 {
+    font-family:'Courier New', Courier, monospace; 
+} 
+
+.back {
+    font-size: 20px;
+    font-family: sans-serif;
+}
