@@ -1,37 +1,40 @@
+const body = document.querySelector("body")
+
+
 const book = {
     title: "text",
     author: "text",
     pages: "number",
     isRead: "checkbox",
     // info = (description) => {return description;}
+    //image
 };
 
 const MyLibrary = [];
+let currentBook = [];
+let v = 1;
 
-function displayBooks() {
-    for (const key in book) {
-        console.table(title + author + pages + isRead)
-    }
+function addBookToLibrary(book) {
+    let container = document.createElement("div")
+    container.setAttribute("style", "border: 2px solid black; border-radius: 10px; padding: 20px; display: flex; flex-wrap: wrap; width: 20%; height: 40%")
+
+    let title = document.createElement("h3")
+    title.textContent = book[0];
+
+    container.appendChild(title)
+    body.appendChild(container)
 }
 
-function addBookToLibrary() {
-
-}
-const body = document.querySelector("body")
-// const form = document.querySelector('form')
-
-// form2 = document.cloneNode()
-
-document.querySelector('.addbook').addEventListener("click", (event) => {
-    MyLibrary.push(addForm(event))
+document.querySelector('.addbook').addEventListener("click", () => {
+    addForm()
 })
 
-function addForm(event) {
+function addForm() {
     const dialog = document.createElement("dialog")
     dialog.setAttribute("open", "")
     const form = document.createElement("form")
-    let localbook = book
-    for (const key in localbook) {
+
+    for (const key in book) {
         const label = document.createElement("label")
         label.setAttribute("for", `${key}`)
         label.textContent = `${key}:`
@@ -45,12 +48,28 @@ function addForm(event) {
     }
 
     const button = document.createElement("button")
-    // button.setAttribute("type", "button")
-    // button.setAttribute("type", "submit")
-    button.textContent = "+"
-    event.preventDefault();
+    button.setAttribute("type", "submit")
+
     form.appendChild(button)
     dialog.appendChild(form)
     body.appendChild(dialog)
-    return localbook
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let i = 0
+        for (const key in book) {
+            currentBook[i] = document.getElementById(`${key}`)
+            if (key === 'isRead') {
+                currentBook[i] = currentBook[i].checked
+            } else {
+                currentBook[i] = currentBook[i].value
+            }
+            i++
+        }
+        MyLibrary.push(currentBook)
+        dialog.close()
+
+        addBookToLibrary(currentBook)
+    })
+    v++;
 }
