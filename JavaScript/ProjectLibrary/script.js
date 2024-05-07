@@ -13,7 +13,7 @@ let MyLibrary = [];
 let currentBook = [];
 let v = 1;
 let EventListeners = [];
-let defaultBook = ["The Default mysteries of Default", "420", "Mo Ke", false]
+let defaultBook = ["Your favorite book", "420", "Mo Ke", false]
 
 addBookToLibrary(defaultBook)
 
@@ -63,7 +63,7 @@ function addBookToLibrary(Ebook) {
 
         container.appendChild(element)
     }
-
+    
     // let cover = document.createElement("div")
     // cover.setAttribute("class", "cover")
     // container.appendChild(cover)
@@ -82,6 +82,7 @@ function transformCheck(element, bool) {
     checkbox.setAttribute("type", "checkbox")
     checkbox.setAttribute("id", `isRead${v}`)
     label.textContent = "Read?"
+    label.setAttribute("class", "container")
 
     label.appendChild(checkbox)
     // element.remove()
@@ -89,6 +90,12 @@ function transformCheck(element, bool) {
     element.appendChild(label)
     if(bool === true)
     checkbox.setAttribute("checked", "")
+
+    let checkmark = document.createElement("div")
+    checkmark.setAttribute("class", "checkmark")
+    
+    label.appendChild(checkmark)
+    
 
 }
 
