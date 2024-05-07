@@ -1,5 +1,5 @@
 const body = document.querySelector("body")
-
+const bookshelf = document.querySelector(".bookshelf")
 
 const book = {
     title: "text",
@@ -7,7 +7,7 @@ const book = {
     author: "text",
     isRead: "checkbox",
     // info = (description) => {return description;}
-    //image
+    // image: "file"
 };
 let MyLibrary = [];
 let currentBook = [];
@@ -18,10 +18,10 @@ let defaultBook = ["The Default mysteries of Default", "420", "Mo Ke", false]
 addBookToLibrary(defaultBook)
 
 
-
 document.querySelector('.addbook').addEventListener("click", () => {
     addForm()
 })
+
 
 function createCheckboxEventListener(id) {
     const isRead = document.querySelector(`#isRead${id}`)
@@ -67,8 +67,9 @@ function addBookToLibrary(Ebook) {
     // let cover = document.createElement("div")
     // cover.setAttribute("class", "cover")
     // container.appendChild(cover)
+    
     //cover image goes here
-    body.appendChild(container)
+    bookshelf.appendChild(container)
     
     MyLibrary[v-1] = [...Ebook]
     EventListeners.push(createCheckboxEventListener(v))
