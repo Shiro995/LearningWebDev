@@ -2,7 +2,7 @@
 // const imageSearch = require('image-search-google');
 
 // let fetchImage;
-// const client = new imageSearch('d0cf2df2fdf4e4c87','AIzaSyD2VjCakOoIFKWmicjfw6bHy1kNG8tOJpc');
+// const client = new imageSearch('d0cf2df2fdf4e4c87','');
 // const options = {page:1};
 
 // function getCover(title) {
