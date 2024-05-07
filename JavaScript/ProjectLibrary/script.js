@@ -105,20 +105,27 @@ function addForm() {
     const form = document.createElement("form")
 
     for (const key in book) {
-        const label = document.createElement("label")
-        label.setAttribute("for", `${key}`)
-        label.textContent = `${key}:`
+        // const label = document.createElement("label")
+        // label.setAttribute("for", `${key}`)
+        // label.textContent = `${key}:`
+        if(key === 'isRead') {
+            const label = document.createElement("p")
+            label.textContent = "Read?"
+            form.appendChild(label)
+        }
         const input = document.createElement("input")
         input.setAttribute("type", book[key]) //to be modified
         input.setAttribute("name", `book_${key}`)
         input.setAttribute("id", `${key}`)
-
-        form.appendChild(label)
+        input.setAttribute("placeholder", `${key}`)
+        // form.appendChild(label)
         form.appendChild(input)
     }
 
     const button = document.createElement("button")
     button.setAttribute("type", "submit")
+    button.setAttribute("class", "btn")
+    button.textContent= "Add it!"
 
     form.appendChild(button)
     dialog.appendChild(form)
