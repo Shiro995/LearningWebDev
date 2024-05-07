@@ -10,6 +10,9 @@ body {
     font-family: "Playfair Display", serif;
     background-repeat: no-repeat;
 }
+a {
+  align-self: start;
+}
 
 .return {
     align-self: start;
